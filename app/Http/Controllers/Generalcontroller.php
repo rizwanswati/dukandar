@@ -24,4 +24,37 @@ class Generalcontroller extends Controller
         $data['TableData'] = General::getAdminUsers(tablePinRequest());
         return view('AdminTables/pinreqs',['Table'=>$data['TableData'],'tableName'=>'Pin Requests']);
     }
+
+    public function loadItems()
+    {
+        $data['TableData'] = General::getAdminUsers(tableItems());
+        return view('Items/items',['Table'=>$data['TableData'],'tableName'=>'Items']);
+    }
+
+    public function loadInvoiceItem()
+    {
+        $data['TableData'] = General::getAdminUsers(tableInvoiceItem());
+        return view('Items/invoiceitems',['Table'=>$data['TableData'],'tableName'=>'Invoice Items']);
+    }
+    public function loadBrands()
+    {
+        $data['TableData'] = General::getAdminUsers(tableBrands());
+        return view('Items/brands',['Table'=>$data['TableData'],'tableName'=>'Brands']);
+    }
+    public function loadImages()
+    {
+        $data['TableData'] = General::getAdminUsers(tableimages());
+        return view('Items/images',['Table'=>$data['TableData'],'tableName'=>'Images']);
+    }
+    public function loadInfo()
+    {
+        $data['TableData'] = General::getAdminUsers(tableinfo());
+        return view('Items/info',['Table'=>$data['TableData'],'tableName'=>'Info']);
+    }
+    public function loadLikes()
+    {
+        $data['TableData'] = General::getAdminUsers(tableliked());
+        return view('Items/likes',['Table'=>$data['TableData'],'tableName'=>'Likes']);
+    }
+
 }

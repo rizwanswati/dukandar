@@ -32,11 +32,21 @@ Route::post('save',[Admin::class,'SaveEditData']);
 Route::get('delete/{id?}',[Admin::class,'Delete']);
 
 
-//General info Routes
+//Admin Table Routes
 Route::get('adminuser',[Generalcontroller::class,'index']);
 Route::get('users',[Generalcontroller::class,'loadRegUsers']);
 Route::get('cities',[Generalcontroller::class,'LoadCities']);
 Route::get('pinreqs',[Generalcontroller::class,'LoadPinRequests']);
+
+//Items Routes
+Route::get('items',[Generalcontroller::class,'loadItems']);
+Route::get('brands',[Generalcontroller::class,'loadBrands']);
+Route::get('images',[Generalcontroller::class,'loadImages']);
+Route::get('info',[Generalcontroller::class,'LoadInfo']);
+Route::get('invoiceitems',[Generalcontroller::class,'LoadInvoiceItem']);
+Route::get('likes',[Generalcontroller::class,'LoadLikes']);
+
+
 
 
 //Miscillanious Test Routs

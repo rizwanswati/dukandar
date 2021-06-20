@@ -76,12 +76,12 @@
                         <span key="t-multi-level">Items</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Items</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Brands</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Info</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Images</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Likes</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Item Invoice</a></li>
+                        <li><a href="items" key="t-level-1-1">Items</a></li>
+                        <li><a href="brands" key="t-level-1-1">Brands</a></li>
+                        <li><a href="info" key="t-level-1-1">Info</a></li>
+                        <li><a href="images" key="t-level-1-1">Images</a></li>
+                        <li><a href="likes" key="t-level-1-1">Likes</a></li>
+
                     </ul>
                 </li>
                 {{--                Items End          --}}
@@ -108,6 +108,7 @@
                     <ul class="sub-menu" aria-expanded="true">
                         <li><a href="javascript: void(0);" key="t-level-1-1">Orders</a></li>
                         <li><a href="javascript: void(0);" key="t-level-1-1">Order Status</a></li>
+                        <li><a href="invoiceitems" key="t-level-1-1">Item Invoice</a></li>
                     </ul>
                 </li>
                 {{--                Orders End          --}}
