@@ -56,5 +56,76 @@ class Generalcontroller extends Controller
         $data['TableData'] = General::getAdminUsers(tableliked());
         return view('Items/likes',['Table'=>$data['TableData'],'tableName'=>'Likes']);
     }
+    public function loadCategories()
+    {
+        $data['TableData'] = General::getAdminUsers(tableCategories());
+        return view('Categories/itemcategory',['Table'=>$data['TableData'],'tableName'=>'Item Categories']);
+    }
+    public function loadSubCategories()
+    {
+        $data['TableData'] = General::getAdminUsers(tableItemSubCategory());
+        return view('Categories/subcategory',['Table'=>$data['TableData'],'tableName'=>'Item Subcategories']);
+    }
+
+    public function loadOrders()
+    {
+        $data['TableData'] = General::getAdminUsers(tableOrders());
+        return view('Orders/orders',['Table'=>$data['TableData'],'tableName'=>'Orders']);
+    }
+
+    public function loadOrderStatus()
+    {
+        $data['TableData'] = General::getAdminUsers(tableOrderStatus());
+        return view('Orders/orderstatus',['Table'=>$data['TableData'],'tableName'=>'Order Status']);
+    }
+
+    public function loadInvoices(){
+        $data['TableData'] = General::getAdminUsers(tableInvoiceItem());
+        return view('Orders/iteminvoice',['Table'=>$data['TableData'],'tableName'=>'Item Invoices']);
+    }
+
+
+    public function loadStocks()
+    {
+        $data['TableData'] = General::getAdminUsers(tableStocks());
+        return view('Inventory/stocks',['Table'=>$data['TableData'],'tableName'=>'Stocks']);
+    }
+    public function loadSuppliers()
+    {
+        $data['TableData'] = General::getAdminUsers(tableSuppliers());
+        return view('Inventory/suppliers',['Table'=>$data['TableData'],'tableName'=>'Suppliers']);
+    }
+
+    public function loadPurchaseItemInvoice()
+    {
+        $data['TableData'] = General::getAdminUsers(tablePurchaseInvoiceItems());
+        return view('Inventory/purchaseinvoiceitems',['Table'=>$data['TableData'],'tableName'=>'Purchase Item Invoices']);
+    }
+
+    public function LoadPurchaseInvoice()
+    {
+        $data['TableData'] = General::getAdminUsers(tablePurhcaseInvoice());
+        return view('Inventory/purchaseinvoices',['Table'=>$data['TableData'],'tableName'=>'Purchase Invoices']);
+    }
+
+    public function LoadReturnItems(){
+        $data['TableData'] = General::getAdminUsers(tablePurchaseReturnItems());
+        return view('Inventory/returnitems',['Table'=>$data['TableData'],'tableName'=>'Return Item']);
+    }
+
+    public function LoadReturnInvoices(){
+        $data['TableData'] = General::getAdminUsers(tablePurchaseReturnInvoices());
+        return view('Inventory/returninvoices',['Table'=>$data['TableData'],'tableName'=>'Retun Invoices']);
+    }
+
+    public function loadUserSearches(){
+        $data['TableData'] = General::getAdminUsers(tableUserSearches());
+        return view('Extras/usersearches',['Table'=>$data['TableData'],'tableName'=>'User Searches']);
+    }
+
+    public function loadAdImages(){
+        $data['TableData'] = General::getAdminUsers(tableAdImageData());
+        return view('Extras/adimages',['Table'=>$data['TableData'],'tableName'=>'Advertisment Images']);
+    }
 
 }

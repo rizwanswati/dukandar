@@ -93,8 +93,8 @@
                         <span key="t-multi-level">Categories</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Item Category</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Item Subcategory</a></li>
+                        <li><a href="category" key="t-level-1-1">Item Category</a></li>
+                        <li><a href="subcategories" key="t-level-1-1">Item Subcategory</a></li>
                     </ul>
                 </li>
                 {{--                Categories End          --}}
@@ -106,9 +106,9 @@
                         <span key="t-multi-level">Orders</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Orders</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Order Status</a></li>
-                        <li><a href="invoiceitems" key="t-level-1-1">Item Invoice</a></li>
+                        <li><a href="orders" key="t-level-1-1">Orders</a></li>
+                        <li><a href="orderstatus" key="t-level-1-1">Order Status</a></li>
+                        <li><a href="invoice" key="t-level-1-1">Item Invoice</a></li>
                     </ul>
                 </li>
                 {{--                Orders End          --}}
@@ -121,12 +121,12 @@
                         <span key="t-multi-level">Inventory</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Supliers</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Stock</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Purchase Item Invoices</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Purchase Invoices</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Return Items</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Return Invoices</a></li>
+                        <li><a href="stock" key="t-level-1-1">Stock</a></li>
+                        <li><a href="suppliers" key="t-level-1-1">Supliers</a></li>
+                        <li><a href="piinvoice" key="t-level-1-1">Purchase Item Invoices</a></li>
+                        <li><a href="pinvoice" key="t-level-1-1">Purchase Invoices</a></li>
+                        <li><a href="rtnitem" key="t-level-1-1">Return Items</a></li>
+                        <li><a href="rtninvoice" key="t-level-1-1">Return Invoices</a></li>
                     </ul>
                 </li>
                 {{--                Inventory End          --}}
@@ -138,8 +138,8 @@
                         <span key="t-multi-level">Extra Data</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href="javascript: void(0);" key="t-level-1-1">User Searches</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Advertisment Images</a></li>
+                        <li><a href="searches" key="t-level-1-1">User Searches</a></li>
+                        <li><a href="adimgs" key="t-level-1-1">Advertisment Images</a></li>
 
                     </ul>
                 </li>

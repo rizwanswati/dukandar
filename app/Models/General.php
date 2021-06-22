@@ -48,4 +48,9 @@ class General extends Model
         $fullName = DB::select("select full_name from user_registrations where mobile_number=$mob");
         return $fullName;
     }
+
+    public static function getSupplierName($id){
+        $fullName = DB::select("select full_name from user_registrations where mobile_number=$id");
+        return $fullName;
+    }
 }

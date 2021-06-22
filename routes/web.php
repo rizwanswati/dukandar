@@ -46,7 +46,26 @@ Route::get('info',[Generalcontroller::class,'LoadInfo']);
 Route::get('invoiceitems',[Generalcontroller::class,'LoadInvoiceItem']);
 Route::get('likes',[Generalcontroller::class,'LoadLikes']);
 
+//Category Routes
+Route::get('category',[Generalcontroller::class,'loadCategories']);
+Route::get('subcategories',[Generalcontroller::class,'loadSubCategories']);
 
+//Orders Routes
+Route::get('orders',[Generalcontroller::class,'loadOrders']);
+Route::get('orderstatus',[Generalcontroller::class,'loadOrderStatus']);
+Route::get('invoice',[Generalcontroller::class,'loadInvoices']);
+
+//Inventory Routes
+Route::get('stock',[Generalcontroller::class,'loadStocks']);
+Route::get('suppliers',[Generalcontroller::class,'loadSuppliers']);
+Route::get('piinvoice',[Generalcontroller::class,'loadPurchaseItemInvoice']);
+Route::get('pinvoice',[Generalcontroller::class,'LoadPurchaseInvoice']);
+Route::get('rtnitem',[Generalcontroller::class,'LoadReturnItems']);
+Route::get('rtninvoice',[Generalcontroller::class,'LoadReturnInvoices']);
+
+//Extra Data Routes
+Route::get('searches',[Generalcontroller::class,'loadUserSearches']);
+Route::get('adimgs',[Generalcontroller::class,'loadAdImages']);
 
 
 //Miscillanious Test Routs

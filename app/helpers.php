@@ -75,6 +75,62 @@ function tableInvoiceItem()
 {
     return 'invoice_items';
 }
+function tableCategories(){
+    return 'items_categories';
+}
+function tableItemSubCategory()
+{
+    return 'items_sub_categories';
+}
+function tableOrders()
+{
+    return 'orders';
+}
+function tableOrderStatus()
+{
+    return 'orders_status';
+}
+
+function tableStocks()
+{
+    return 'inventory__stock';
+}
+
+function tableSuppliers()
+{
+    return 'inventory__suppliers';
+}
+function tablePurchaseInvoiceItems()
+{
+    return 'inventory__purchese_invoice_items';
+}
+function tablePurhcaseInvoice()
+{
+    return 'inventory__purchese_invoices';
+}
+function tablePurchaseReturnItems()
+{
+    return 'inventory__purchase_return_items';
+}
+function tablePurchaseReturnInvoices()
+{
+    return 'inventory__purchase_return_invoices';
+}
+
+function tableUserSearches()
+{
+    return 'extra_data__user_search';
+}
+function tableAdImageData()
+{
+    return 'advertising_images';
+}
+
+
+
+
+
+
 
 function getCity($id){
     $city = \App\Models\General::getCity($id);
@@ -159,6 +215,20 @@ function getCustomerName($mobileNumber){
             return 'Nill';
         }else{
             return $name[0]->full_name;
+        }
+    }
+}
+
+function getSupplier($id)
+{
+    if(empty($id)){
+        return "nill";
+    }else{
+        $supplier = \App\Models\General::getSupplierName($id);
+        if(empty($supplier)){
+            return 'Nill';
+        }else{
+            return $supplier[0]->supplier_name;
         }
     }
 }
