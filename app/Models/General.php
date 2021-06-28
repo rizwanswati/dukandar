@@ -40,7 +40,7 @@ class General extends Model
         return $item;
     }
     public static function getBrandName($id){
-        $brand = DB::select("select brand_name from items_brands where brand_id=$id");
+        $brand = DB::select("select brand_name from items__brands where brand_id=$id");
         return $brand;
     }
 
