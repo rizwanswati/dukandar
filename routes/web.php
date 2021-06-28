@@ -67,6 +67,12 @@ Route::get('rtninvoice',[Generalcontroller::class,'LoadReturnInvoices']);
 Route::get('searches',[Generalcontroller::class,'loadUserSearches']);
 Route::get('adimgs',[Generalcontroller::class,'loadAdImages']);
 
+//Zones' Routes
+Route::get('zones',[Generalcontroller::class,'loadZones']);
+Route::get('zonearea',[Generalcontroller::class,'loadZonesAreas']);
+Route::get('zoneinvoices',[Generalcontroller::class,'loadZoneInvoices']);
+Route::get('vendorstatus',[Generalcontroller::class,'loadZoneVendorStatus']);
+
 
 //Miscillanious Test Routs
 Route::get('showsess',[Login::class,'showSess']);

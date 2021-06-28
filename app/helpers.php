@@ -126,11 +126,22 @@ function tableAdImageData()
     return 'advertising_images';
 }
 
-
-
-
-
-
+function tableZones()
+{
+    return 'zones';
+}
+function tableZonesAreas()
+{
+    return 'zone_areas';
+}
+function tableZoneInvoiceItems()
+{
+    return 'zzz_invoice_items';
+}
+function tableZoneVendorStatus()
+{
+    return 'zzz_vendor_include_status';
+}
 
 function getCity($id){
     $city = \App\Models\General::getCity($id);
@@ -233,5 +244,16 @@ function getSupplier($id)
     }
 }
 
-
-
+function getZone($id)
+{
+    if(empty($id)){
+        return "nill";
+    }else{
+        $zone = \App\Models\General::getZoneName($id);
+        if(empty($zone)){
+            return 'Nill';
+        }else{
+            return $zone[0]->zone_name;
+        }
+    }
+}

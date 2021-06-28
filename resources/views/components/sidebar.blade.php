@@ -152,9 +152,10 @@
                         <span key="t-multi-level">Zone</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Zone Areas</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Zone Invoice Items</a></li>
-                        <li><a href="javascript: void(0);" key="t-level-1-1">Vendor Include Status</a></li>
+                        <li><a href="zones" key="t-level-1-1">Zones</a></li>
+                        <li><a href="zonearea" key="t-level-1-1">Zone Areas</a></li>
+                        <li><a href="zoneinvoices" key="t-level-1-1">Zone Invoice Items</a></li>
+                        <li><a href="vendorstatus" key="t-level-1-1">Vendor Include Status</a></li>
                     </ul>
                 </li>
                 {{--                Zone End          --}}

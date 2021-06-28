@@ -128,4 +128,24 @@ class Generalcontroller extends Controller
         return view('Extras/adimages',['Table'=>$data['TableData'],'tableName'=>'Advertisment Images']);
     }
 
+    public function loadZones(){
+        $data['TableData'] = General::getAdminUsers(tableZones());
+        return view('Zones/zones',['Table'=>$data['TableData'],'tableName'=>'Zones']);
+    }
+
+    public function loadZonesAreas(){
+        $data['TableData'] = General::getAdminUsers(tableZonesAreas());
+        return view('Zones/zoneareas',['Table'=>$data['TableData'],'tableName'=>'Zone Areas']);
+    }
+
+    public function loadZoneInvoices(){
+        $data['TableData'] = General::getAdminUsers(tableZoneInvoiceItems());
+        return view('Zones/zoneinvoiceitems',['Table'=>$data['TableData'],'tableName'=>'Zone Invoice Items']);
+    }
+
+    public function loadZoneVendorStatus(){
+        $data['TableData'] = General::getAdminUsers(tableZoneVendorStatus());
+        return view('Zones/zonevendorstatus',['Table'=>$data['TableData'],'tableName'=>'Zone Vendor Status']);
+    }
+
 }

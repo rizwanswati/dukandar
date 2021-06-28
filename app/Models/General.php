@@ -53,4 +53,11 @@ class General extends Model
         $fullName = DB::select("select full_name from user_registrations where mobile_number=$id");
         return $fullName;
     }
+
+    public static function getZoneName($id){
+        $Name = DB::select("select zone_name from zones where zone_id=$id");
+        return $Name;
+    }
+
+
 }
