@@ -22,24 +22,10 @@
                                         <th>Sale Rate</th>
                                         <th>MRP</th>
                                         <th>Expiry</th>
+                                        <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->id}}</td>
-                                            <td>{{$col->pur_return_invoice_id}}</td>
-                                            <td>{{$col->item_id}}</td>
-                                            <td>{{getItemName($col->item_id)}}</td>
-                                            <td>{{$col->purchase_rate}}</td>
-                                            <td>{{$col->quantity}}</td>
-                                            <td>{{$col->sale_rate}}</td>
-                                            <td>{{$col->mrp}}</td>
-                                            <td>{{$col->expiry_date}}</td>
-                                        </tr>
-                                    @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
@@ -48,3 +34,7 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<script src="{{asset('assets/js/Inventory/returnitems.js')}}"></script>
+</body>
+</html>
+

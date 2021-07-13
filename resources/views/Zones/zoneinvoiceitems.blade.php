@@ -29,29 +29,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->id}}</td>
-                                            <td>{{$col->invoice_number}}</td>
-                                            <td>{{$col->item_id}}</td>
-                                            <td>{{getItemName($col->item_id)}}</td>
-                                            <td>{{$col->item_qty}}</td>
-                                            <td>{{$col->item_unit}}</td>
-                                            <td>{{$col->item_rate}}</td>
-                                            <td>{{$col->item_discount_percent}}</td>
-                                            <td>{{getVendor($col->vendor_id)}}</td>
-                                            <td>{{$col->vendor_include}}</td>
-                                            <td>{{$col->operation_time}}</td>
-                                            <td>{{getVendor($col->operation_by_user)}}</td>
-                                            <td>
-                                                <a class="btn btn-primary waves-effect waves-light" href="{{URL::to('/').'/edit/'.$col->id}}" role="button"><i class="mdi mdi-pencil d-block font-size-16"></i></a>
-                                                &nbsp;
-                                                <a class="btn btn-danger waves-effect waves-light" href="{{URL::to('/').'/delete/'.$col->id}}" role="button"><i class="mdi mdi-trash-can d-block font-size-16"></i></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
@@ -60,3 +37,7 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<!-- Datatable Admin init js -->
+<script src="{{asset('assets/js/Zones/zoneinvoice.js')}}"></script>
+</body>
+</html>

@@ -25,25 +25,6 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->supplier_id}}</td>
-                                            <td>{{$col->supplier_name}}</td>
-                                            <td>{{$col->supplier_buisness_name}}</td>
-                                            <td>{{$col->supplier_address}}</td>
-                                            <td>{{$col->supplier_mobile}}</td>
-                                            <td>{{getCity($col->supplier_city)}}</td>
-                                            <td>{{$col->supplier_status}}</td>
-                                            <td>{{$col->supplier_created_on}}</td>
-                                            <td>
-                                                <a class="btn btn-primary waves-effect waves-light" href="{{URL::to('/').'/edit/'.$col->supplier_id}}" role="button"><i class="mdi mdi-pencil d-block font-size-16"></i></a>
-                                                &nbsp;
-                                                <a class="btn btn-danger waves-effect waves-light" href="{{URL::to('/').'/delete/'.$col->supplier_id}}" role="button"><i class="mdi mdi-trash-can d-block font-size-16"></i></a>
-                                            </td>
-                                        </tr>
-                                        <!-- end Table and class=row -->
-                                    @endforeach
-
                                 </table>
                             </div>
                         </div>
@@ -51,3 +32,7 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<script src="{{asset('assets/js/Inventory/suppliers.js')}}"></script>
+</body>
+</html>
+

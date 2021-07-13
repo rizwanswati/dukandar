@@ -18,26 +18,10 @@
                                         <th>Mobile #</th>
                                         <th>Searched Text</th>
                                         <th>Searched Time</th>
-                                        <th>Action</th>
+
                                     </tr>
                                     </thead>
                                     <tbody>
-
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->id}}</td>
-                                            <td>{{getCustomerName($col->mobile_number)}}</td>
-                                            <td>{{$col->mobile_number}}</td>
-                                            <td>{{$col->searched_text}}</td>
-                                            <td>{{$col->searched_time}}</td>
-                                            <td>
-                                                <a class="btn btn-primary waves-effect waves-light" href="{{URL::to('/').'/edit/'.$col->id}}" role="button"><i class="mdi mdi-pencil d-block font-size-16"></i></a>
-                                                &nbsp;
-                                                <a class="btn btn-danger waves-effect waves-light" href="{{URL::to('/').'/delete/'.$col->id}}" role="button"><i class="mdi mdi-trash-can d-block font-size-16"></i></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
@@ -46,3 +30,7 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<!-- Datatable Admin init js -->
+<script src="{{asset('assets/js/Extras/usersrchs.js')}}"></script>
+</body>
+</html>

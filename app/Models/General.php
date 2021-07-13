@@ -59,5 +59,8 @@ class General extends Model
         return $Name;
     }
 
+    public static function updateImageUrls($tableName,$colName,$updatedUrl,$idTag,$id){
+        DB::update("update $tableName set $colName ="."'$updatedUrl'"."where $idTag=$id");
+    }
 
 }

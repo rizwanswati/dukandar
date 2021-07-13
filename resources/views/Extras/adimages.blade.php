@@ -15,27 +15,12 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Image Title</th>
+                                        <th>Image URL</th>
                                         <th>Image</th>
-                                        <th>Action</th>
+                                        {{-- <th>Action</th> --}}
                                     </tr>
                                     </thead>
                                     <tbody>
-
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->id}}</td>
-                                            <td>{{$col->image_title}}</td>
-                                            <td>
-                                                <img src="{{$col->image_url}}" />
-                                            </td>
-
-                                            <td>
-                                                <a class="btn btn-primary waves-effect waves-light" href="{{URL::to('/').'/edit/'.$col->id}}" role="button"><i class="mdi mdi-pencil d-block font-size-16"></i></a>
-                                                &nbsp;
-                                                <a class="btn btn-danger waves-effect waves-light" href="{{URL::to('/').'/delete/'.$col->id}}" role="button"><i class="mdi mdi-trash-can d-block font-size-16"></i></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
 
                                     </tbody>
                                 </table>
@@ -45,3 +30,8 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<!-- Datatable Admin init js -->
+<script src="{{asset('assets/js/Extras/adimages.js')}}"></script>
+</body>
+</html>
+

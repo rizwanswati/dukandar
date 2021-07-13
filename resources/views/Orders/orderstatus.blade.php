@@ -20,27 +20,10 @@
                                         <th>Decision By</th>
                                         <th>Decision Time</th>
                                         <th>Remarks</th>
-                                        <th>Action</th>
+
                                     </tr>
                                     </thead>
                                     <tbody>
-
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->order_status_id}}</td>
-                                            <td>{{$col->invoice_number}}</td>
-                                            <td>{{$col->pre_status}}</td>
-                                            <td>{{$col->post_status}}</td>
-                                            <td>{{getVendor($col->decision_by)}}</td>
-                                            <td>{{$col->decision_time}}</td>
-                                            <td>{{$col->remarks}}</td>
-                                            <td>
-                                                <a class="btn btn-primary waves-effect waves-light" href="{{URL::to('/').'/edit/'.$col->order_status_id}}" role="button"><i class="mdi mdi-pencil d-block font-size-16"></i></a>
-                                                &nbsp;
-                                                <a class="btn btn-danger waves-effect waves-light" href="{{URL::to('/').'/delete/'.$col->order_status_id}}" role="button"><i class="mdi mdi-trash-can d-block font-size-16"></i></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
 
                                     </tbody>
                                 </table>
@@ -50,3 +33,7 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<script src="{{asset('assets/js/Orders/orderstatus.js')}}"></script>
+</body>
+</html>
+

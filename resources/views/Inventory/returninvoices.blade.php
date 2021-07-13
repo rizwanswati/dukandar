@@ -18,25 +18,15 @@
                                         <th>Total Items</th>
                                         <th>Total Amount</th>
                                         <th>Reason</th>
-                                        <th>Supplier</th>
-                                        <th>Created By</th>
+                                        <th>Supplier#</th>
+                                        <th>Supplier Name</th>
+                                        <th>Admin #</th>
+                                        <th>Admin Name</th>
                                         <th>Date</th>
+                                        <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->pur_return_invoice_id}}</td>
-                                            <td>{{$col->purchase_invoice_number}}</td>
-                                            <td>{{$col->total_items}}</td>
-                                            <td>{{$col->total_amount}}</td>
-                                            <td>{{$col->reason}}</td>
-                                            <td>{{getSupplier($col->supplier_id)}}</td>
-                                            <td>{{getVendor($col->created_by)}}</td>
-                                            <td>{{$col->created_on}}</td>
-                                        </tr>
-                                    @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
@@ -45,3 +35,7 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<script src="{{asset('assets/js/Inventory/returninvoices.js')}}"></script>
+</body>
+</html>
+

@@ -13,8 +13,9 @@
                                 <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                                     <thead>
                                     <tr>
-                                        <th>Purchase Invoice #</th>
-                                        <th>Item Name</th>
+                                        <th>ID</th>
+                                        <th>Invoice #</th>
+                                        <th>Name</th>
                                         <th>Item ID</th>
                                         <th>Rate</th>
                                         <th>Sale</th>
@@ -24,20 +25,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->purchase_invoice_number}}</td>
-                                            <td>{{getItemName($col->item_id)}}</td>
-                                            <td>{{$col->item_id}}</td>
-                                            <td>{{$col->purchase_rate}}</td>
-                                            <td>{{$col->sale_rate}}</td>
-                                            <td>{{$col->quantity}}</td>
-                                            <td>{{$col->mrp}}</td>
-                                            <td>{{$col->expiry_date}}</td>
-                                        </tr>
-                                    @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
@@ -46,3 +33,8 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<!-- Datatable Admin init js -->
+<script src="{{asset('assets/js/Inventory/purchaseinvoiceitems.js')}}"></script>
+</body>
+</html>
+

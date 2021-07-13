@@ -17,26 +17,10 @@
                                         <th>Name</th>
                                         <th>City</th>
                                         <th>Status</th>
-                                        <th>Action</th>
+
                                     </tr>
                                     </thead>
                                     <tbody>
-
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->zone_id}}</td>
-                                            <td>{{$col->zone_name}}</td>
-                                            <td>{{getCity($col->city_id)}}</td>
-                                            <td>{{$col->zone_status}}</td>
-
-                                            <td>
-                                                <a class="btn btn-primary waves-effect waves-light" href="{{URL::to('/').'/edit/'.$col->zone_id}}" role="button"><i class="mdi mdi-pencil d-block font-size-16"></i></a>
-                                                &nbsp;
-                                                <a class="btn btn-danger waves-effect waves-light" href="{{URL::to('/').'/delete/'.$col->zone_id}}" role="button"><i class="mdi mdi-trash-can d-block font-size-16"></i></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
@@ -45,3 +29,8 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<!-- Datatable Admin init js -->
+<script src="{{asset('assets/js/Zones/zones.js')}}"></script>
+</body>
+</html>
+

@@ -23,22 +23,6 @@
                                     </thead>
                                     <tbody>
 
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{getZone($col->zone_id)}}</td>
-                                            <td>{{$col->area_id}}</td>
-                                            <td>{{$col->area_name}}</td>
-                                            <td>{{$col->area_delivery_charges}}</td>
-                                            <td>{{$col->area_status}}</td>
-
-                                            <td>
-                                                <a class="btn btn-primary waves-effect waves-light" href="{{URL::to('/').'/edit/'.$col->area_id}}" role="button"><i class="mdi mdi-pencil d-block font-size-16"></i></a>
-                                                &nbsp;
-                                                <a class="btn btn-danger waves-effect waves-light" href="{{URL::to('/').'/delete/'.$col->area_id}}" role="button"><i class="mdi mdi-trash-can d-block font-size-16"></i></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
@@ -47,3 +31,8 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<!-- Datatable Admin init js -->
+<script src="{{asset('assets/js/Zones/zonearea.js')}}"></script>
+</body>
+</html>
+

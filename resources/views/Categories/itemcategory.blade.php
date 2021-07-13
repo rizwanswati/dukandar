@@ -19,32 +19,12 @@
                                         <th>Type</th>
                                         <th>Priority</th>
                                         <th>Status</th>
+                                        <th>Image URL</th>
                                         <th>Image</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->category_id}}</td>
-                                            <td>{{$col->category_name}}</td>
-                                            <td>{{$col->category_description}}</td>
-                                            <td>{{$col->category_type}}</td>
-                                            <td>{{$col->category_priority}}</td>
-                                            <td>{{$col->category_status}}</td>
-                                            <td>
-                                                <img src="{{$col->category_image_url}}" />
-                                            </td>
-
-                                            <td>
-                                                <a class="btn btn-primary waves-effect waves-light" href="{{URL::to('/').'/edit/'.$col->category_id}}" role="button"><i class="mdi mdi-pencil d-block font-size-16"></i></a>
-                                                &nbsp;
-                                                <a class="btn btn-danger waves-effect waves-light" href="{{URL::to('/').'/delete/'.$col->category_id}}" role="button"><i class="mdi mdi-trash-can d-block font-size-16"></i></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
@@ -53,3 +33,8 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<!-- Datatable Admin init js -->
+<script src="{{asset('assets/js/Categories/category.js')}}"></script>
+</body>
+</html>
+

@@ -13,31 +13,17 @@
                                 <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                                     <thead>
                                     <tr>
+                                        <th>Image ID</th>
                                         <th>Item ID</th>
                                         <th>Item Name</th>
                                         <th>Status</th>
+                                        <th>Desc</th>
+                                        <th>Image URL</th>
                                         <th>Image</th>
-                                        <th>Action</th>
+
                                     </tr>
                                     </thead>
                                     <tbody>
-
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->item_id}}</td>
-                                            <td>{{getItemName($col->item_id)}}</td>
-                                            <td>{{$col->item_image_status}}</td>
-                                            <td>
-                                                <img src="{{$col->item_image_url}}" />
-                                            </td>
-
-                                            <td>
-                                                <a class="btn btn-primary waves-effect waves-light" href="{{URL::to('/').'/edit/'.$col->items_images_id}}" role="button"><i class="mdi mdi-pencil d-block font-size-16"></i></a>
-                                                &nbsp;
-                                                <a class="btn btn-danger waves-effect waves-light" href="{{URL::to('/').'/delete/'.$col->items_images_id}}" role="button"><i class="mdi mdi-trash-can d-block font-size-16"></i></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
 
                                     </tbody>
                                 </table>
@@ -47,3 +33,9 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<script src="{{asset('assets/js/Items/images.js')}}"></script>
+</body>
+
+</html>
+
+

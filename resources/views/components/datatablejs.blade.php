@@ -39,24 +39,11 @@
 <script src="{{asset('assets/libs/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
 <script src="{{asset('assets/libs/datatables.net-buttons/js/buttons.colVis.min.js')}}"></script>
 
+{{-- datatable editing --}}
+  <script src="https://markcell.github.io/jquery-tabledit/assets/js/tabledit.min.js"></script>
+
 <!-- Responsive examples -->
 <script src="{{asset('assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
 <script src="{{asset('assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
-
-<!-- Datatable init js -->
-<script src="{{asset('assets/js/pages/datatables.init.js')}}"></script>
-
-
-
-
-<!-- dashboard init -->
-{{--<script src="{{asset('assets/js/pages/dashboard.init.js')}}"></script>--}}
-
-<!-- App js -->
 <script src="{{asset('assets/js/app.js')}}"></script>
-
-
-</body>
-
-</html>
 

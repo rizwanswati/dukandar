@@ -4,26 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\General;
+use App\Models\Order;
 
 class Generalcontroller extends Controller
 {
-    function index(){
-        $data['TableData'] = General::getAdminUsers(tableAdmin());
-        return view('AdminTables/dbinfo',['Table'=>$data['TableData'],'tableName'=>'Admin Users']);
-    }
-    function loadRegUsers(){
-        $data['TableData'] = General::getAdminUsers(tableCustomer());
-       // return $data;
-        return view('AdminTables/customer',['Table'=>$data['TableData'],'tableName'=>'Registered Users']);
-    }
-    function LoadCities(){
-        $data['TableData'] = General::getAdminUsers(tableCities());
-        return view('AdminTables/cities',['Table'=>$data['TableData'],'tableName'=>'Cities']);
-    }
-    function LoadPinRequests(){
-        $data['TableData'] = General::getAdminUsers(tablePinRequest());
-        return view('AdminTables/pinreqs',['Table'=>$data['TableData'],'tableName'=>'Pin Requests']);
-    }
+
+
 
     public function loadItems()
     {
@@ -67,11 +53,7 @@ class Generalcontroller extends Controller
         return view('Categories/subcategory',['Table'=>$data['TableData'],'tableName'=>'Item Subcategories']);
     }
 
-    public function loadOrders()
-    {
-        $data['TableData'] = General::getAdminUsers(tableOrders());
-        return view('Orders/orders',['Table'=>$data['TableData'],'tableName'=>'Orders']);
-    }
+
 
     public function loadOrderStatus()
     {
@@ -146,6 +128,81 @@ class Generalcontroller extends Controller
     public function loadZoneVendorStatus(){
         $data['TableData'] = General::getAdminUsers(tableZoneVendorStatus());
         return view('Zones/zonevendorstatus',['Table'=>$data['TableData'],'tableName'=>'Zone Vendor Status']);
+    }
+
+    //advertisment images
+    public function adimg()
+    {
+        $data = General::getAdminUsers(tableAdImageData());
+        $tableName  = tableAdImageData();
+        $colName    = 'image_url';
+
+        foreach($data as $item){
+            $updatedUrl = "assets/images/".$item->image_url;
+            General::updateImageUrls($tableName,$colName,$updatedUrl,'id',$item->id);
+            echo 'updated = '.$updatedUrl.'</br>';
+        }
+
+    }
+
+    //item brands
+    public function itb()
+    {
+        $data = General::getAdminUsers(tableBrands());
+        $tableName  = tableBrands();
+        $colName    = 'brand_image_url';
+
+        foreach($data as $item){
+            $updatedUrl = "assets/images/".$item->brand_image_url;
+            General::updateImageUrls($tableName,$colName,$updatedUrl,'brand_id',$item->brand_id);
+            echo 'updated = '.$updatedUrl.'</br>';
+        }
+
+    }
+
+    //item Images
+    public function ii()
+    {
+        $data = General::getAdminUsers(tableimages());
+        $tableName  = tableimages();
+        $colName    = 'item_image_url';
+
+        foreach($data as $item){
+            $updatedUrl = "assets/images/".$item->item_image_url;
+            General::updateImageUrls($tableName,$colName,$updatedUrl,'items_images_id',$item->items_images_id);
+            echo 'updated = '.$updatedUrl.'</br>';
+        }
+
+    }
+
+    //category images
+    public function cati()
+    {
+        $data = General::getAdminUsers(tableCategories());
+        $tableName  = tableCategories();
+        $colName    = 'category_image_url';
+
+        foreach($data as $item){
+            $updatedUrl = "assets/images/".$item->category_image_url;
+            General::updateImageUrls($tableName,$colName,$updatedUrl,'category_id',$item->category_id);
+            echo 'updated = '.$updatedUrl.'</br>';
+        }
+
+    }
+
+    //Sub Category image url
+    public function subcati()
+    {
+        $data = General::getAdminUsers(tableItemSubCategory());
+        $tableName  = tableItemSubCategory();
+        $colName    = 'subcategory_image_url';
+
+        foreach($data as $item){
+            $updatedUrl = "assets/images/".$item->subcategory_image_url;
+            General::updateImageUrls($tableName,$colName,$updatedUrl,'subcategory_id',$item->subcategory_id);
+            echo 'updated = '.$updatedUrl.'</br>';
+        }
+
     }
 
 }

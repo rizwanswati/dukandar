@@ -19,6 +19,7 @@
                                         <th>Paid</th>
                                         <th>Extra Charges</th>
                                         <th>Discount</th>
+                                        <th>Supplier#</th>
                                         <th>Supplier</th>
                                         <th>Payment Mode</th>
                                         <th>Date</th>
@@ -28,30 +29,7 @@
                                         <th>Action</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-
-                                    @foreach($Table as $col)
-                                        <tr>
-                                            <td>{{$col->id}}</td>
-                                            <td>{{$col->purchase_invoice_number}}</td>
-                                            <td>{{$col->total_items}}</td>
-                                            <td>{{$col->total_amount}}</td>
-                                            <td>{{$col->paid_amount}}</td>
-                                            <td>{{$col->extra_charges}}</td>
-                                            <td>{{$col->discount}}</td>
-                                            <td>{{getSupplier($col->supplier_id)}}</td>
-                                            <td>{{$col->payment_mode}}</td>
-                                            <td>{{$col->purchase_date}}</td>
-                                            <td>{{getVendor($col->created_by)}}</td>
-                                            <td>{{$col->last_modified_time}}</td>
-                                            <td>{{getVendor($col->last_modified_by)}}</td>
-                                            <td>
-                                                <a class="btn btn-primary waves-effect waves-light" href="{{URL::to('/').'/edit/'.$col->id}}" role="button"><i class="mdi mdi-pencil d-block font-size-16"></i></a>
-                                                &nbsp;
-                                                <a class="btn btn-danger waves-effect waves-light" href="{{URL::to('/').'/delete/'.$col->id}}" role="button"><i class="mdi mdi-trash-can d-block font-size-16"></i></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
+                                   <tbody>
 
                                     </tbody>
                                 </table>
@@ -61,3 +39,6 @@
                 </div>
                 <!-- end Table and class=row -->
 <x-datatablejs />
+<script src="{{asset('assets/js/Inventory/purchaseinvoices.js')}}"></script>
+</body>
+</html>

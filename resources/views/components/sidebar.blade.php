@@ -156,9 +156,27 @@
                         <li><a href="zonearea" key="t-level-1-1">Zone Areas</a></li>
                         <li><a href="zoneinvoices" key="t-level-1-1">Zone Invoice Items</a></li>
                         <li><a href="vendorstatus" key="t-level-1-1">Vendor Include Status</a></li>
+                        {{-- <li><a href="updateimages" key="t-level-1-1">Img Add update</a></li> --}}
                     </ul>
                 </li>
                 {{--                Zone End          --}}
+
+
+                               {{-- Image Address Update Data          --}}
+                {{-- <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-hive"></i>
+                        <span key="t-multi-level">Image Address</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="true">
+                        <li><a href="adimg" key="t-level-1-1">Add Images</a></li>
+                        <li><a href="itb" key="t-level-1-1">Item Brands</a></li>
+                        <li><a href="ii" key="t-level-1-1">Item Images</a></li>
+                        <li><a href="cati" key="t-level-1-1">Categories</a></li>
+                        <li><a href="subcati" key="t-level-1-1">Sub Categories</a></li>
+                    </ul>
+                </li> --}}
+                {{--                Image Address Update          --}}
 
 
 
