@@ -3,7 +3,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.blade.php" class="logo logo-dark">
+                <a href="#" class="logo logo-dark">
                                 <span class="logo-sm">
                                     <img src="{{asset('assets/images/logo.svg')}}" alt="" height="22">
                                 </span>
@@ -11,12 +11,12 @@
                                     <img src="{{asset('assets/images/logo-dark.png')}}" alt="" height="17">
                                 </span>
                 </a>
-                <a href="index" class="logo logo-light">
+                <a href="#" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{asset('assets/images/logo-light.svg')}}" alt="" height="22">
+                                    <img src="{{asset('assets/images/favicon-dukandar.png')}}" alt="" height="22">
                                 </span>
                     <span class="logo-lg">
-                                    <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="19">
+                                    <img src="{{asset('assets/images/logo-dukandar.png')}}" alt="" height="19">
                                 </span>
                 </a>
             </div>
@@ -188,7 +188,7 @@
                 </div>
             </div>
 
-            <div class="dropdown d-inline-block">
+            {{-- <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img id="header-lang-img" src="{{asset('assets/images/flags/us.jpg')}}" alt="Header Language" height="16">
@@ -219,7 +219,7 @@
                         <img src="{{asset('assets/images/flags/russia.jpg')}}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
                     </a>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="dropdown d-none d-lg-inline-block ms-1">
                 <button type="button" class="btn header-item noti-icon waves-effect"

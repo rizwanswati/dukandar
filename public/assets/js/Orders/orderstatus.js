@@ -24,6 +24,7 @@ $(document).ready(function()
                 {"data":"decision_time"},
                 {"data":"remarks"}
             ],
+            "order": [[ 0, "desc" ]],
 
             buttons: [
                 "copy","excel","pdf","colvis","print","pageLength"

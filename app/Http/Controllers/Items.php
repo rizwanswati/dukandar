@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Item;
+use Illuminate\Support\Facades\URL;
 use Yajra\DataTables\DataTables;
 
 
@@ -24,7 +25,7 @@ class Items extends Controller
             $data = Item::getBrands();
             return DataTables($data)
             ->addColumn('brand_image_url', function ($data) {
-                $url=$data->brand_image_url;
+                $url=$url=$this->ImgURL().$data->brand_image_url;
                 return '<img src='.$url.' border="0" width="55" height="55" class="img-rounded" align="center" />';
          })->rawColumns(['brand_image_url'])
          ->make(true);
@@ -37,7 +38,7 @@ class Items extends Controller
             $data = Item::getImages();
             return DataTables($data)
             ->addColumn('image', function ($data) {
-                $url=$data->item_image_url;
+                $url=$this->ImgURL().$data->item_image_url;
                 return '<img src='.$url.' border="0" width="55" height="55" class="img-rounded" align="center" />';
          })->rawColumns(['image'])
          ->make(true);
@@ -51,6 +52,7 @@ class Items extends Controller
             return DataTables($data)
             ->make(true);
         }
+
     }
      public function loadLikes(Request $request){
         if($request->ajax()){
@@ -170,5 +172,9 @@ class Items extends Controller
                 }
             }
         }
+    }
+
+    public function ImgURL(){
+        return URL::to('/')."/assets/images/";
     }
 }

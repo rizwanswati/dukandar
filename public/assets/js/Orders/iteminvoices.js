@@ -29,6 +29,7 @@ $(document).ready(function()
                 {"data":"user_name"},
                 {"data":"vendor_include"}
             ],
+            "order": [[ 0, "desc" ]],
 
             "initComplete":function(settings,JSON){
                 // DataTable().columns.adjust();

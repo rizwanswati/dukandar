@@ -9,7 +9,7 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset('assets/images/favicon-dukandar.png')}}">
 
         <!-- owl.carousel css -->
         <link rel="stylesheet" href="{{asset('assets/libs/owl.carousel/assets/owl.carousel.min.css')}}">
@@ -86,10 +86,10 @@
                             <div class="w-100">
 
                                 <div class="d-flex flex-column h-100">
-                                    <div class="mb-4 mb-md-5">
+                                    <div class="mb-4 mb-md-6">
                                         <a href="#" class="d-block auth-logo">
-                                            <img src="{{asset('assets/images/logo-dark.png')}}" alt="" height="18" class="auth-logo-dark">
-                                            <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="18" class="auth-logo-light">
+                                            <img src="{{asset('assets/images/logo-dukandar.png')}}" alt="" height="38" width="180" class="auth-logo-dark">
+                                            {{-- <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="18" class="auth-logo-light"> --}}
                                         </a>
                                     </div>
                                     <div class="my-auto">
@@ -170,15 +170,15 @@
                                             </form>
                                             {{--Form Ends--}}
 
-                                            <div class="mt-5 text-center">
+                                            {{-- <div class="mt-5 text-center">
                                                 <p>Don't have an account ? <a href="#" class="fw-medium text-primary"> Signup now </a> </p>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
 
-                                    <div class="mt-4 mt-md-5 text-center">
+                                    {{-- <div class="mt-4 mt-md-5 text-center">
                                         <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Dukandar. Crafted with <i class="mdi mdi-heart text-danger"></i> by Codeprotocol</p>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
 

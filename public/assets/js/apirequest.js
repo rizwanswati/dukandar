@@ -1,5 +1,12 @@
 $(document).ready(function () {
-    var table = $('#datatable-buttons').DataTable();
+    var table = $('#datatable-buttons').DataTable({
+        "lengthChange": true,
+        "dom":"Bfrtip",
+        "lengthMenu": [10, 25, 50,100,200,500,1000,"All"],
+        buttons: [
+            "copy","excel","pdf","colvis","print","pageLength"
+        ]
+});
     table.clear();
 
     $("#submit").click(function(){
@@ -24,6 +31,10 @@ $(document).ready(function () {
             $.ajax({
                 type: "GET",
                 url: request_url,
+                beforeSend: function(){
+
+                    $("#loader").show();
+                   },
                 success: function (data) {
                     console.log(data);
                     for (var i=0; i<data.length; i++){
@@ -39,12 +50,18 @@ $(document).ready(function () {
                         ]).draw();
                     }
                 },
+                complete:function(data){
+                    // Hide image container
+                    $("#loader").hide();
+                   },
                 error: function (XMLHttpRequest,textStatus,errorThrown) {
                     alert("No Record Was Found");
                 }
             });
         }
     });
+
+
 
     $('select[name="cities"]').change(function () {
         var city_id  = $(this).val();
@@ -53,10 +70,15 @@ $(document).ready(function () {
             alert('select correct city');
         }else {
             vendors.empty();
-            var requesurl = "http://localhost/dukandar/public/api/getVendors" + "/" + city_id;
+            // var requesurl = "http://localhost/dukandar/public/api/getVendors" + "/" + city_id;
+            var requesurl = "http://admin.ritzysmartapps.com/public/api/getVendors" + "/" + city_id;
             $.ajax({
                 type: "GET",
                 url: requesurl,
+                beforeSend: function(){
+                    // Show image container
+                    $("#loader").show();
+                   },
                 success: function (data) {
                     if (data.length != 0) {
                         console.log(data);
@@ -68,6 +90,10 @@ $(document).ready(function () {
                         alert('No vendor found for this city');
                     }
                 },
+                complete:function(data){
+                    // Hide image container
+                    $("#loader").hide();
+                   },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     alert("No Record Was Found");
                 }
@@ -82,10 +108,15 @@ $(document).ready(function () {
         var categories = $('select[name="cats"]');
         categories.empty();
 
-            var requesurl = "http://localhost/dukandar/public/api/getcategories" + "/" + vendor_id;
+            // var requesurl = "http://localhost/dukandar/public/api/getcategories" + "/" + vendor_id;
+            var requesurl = "http://admin.ritzysmartapps.com/public/api/getcategories" + "/" + vendor_id;
             $.ajax({
                 type: "GET",
                 url: requesurl,
+                beforeSend: function(){
+                    // Show image container
+                    $("#loader").show();
+                   },
                 success: function (data) {
                     if (data.length != 0) {
                         console.log(data);
@@ -99,6 +130,10 @@ $(document).ready(function () {
                         alert('No vendor found for this city');
                     }
                 },
+                complete:function(data){
+                    // Hide image container
+                    $("#loader").hide();
+                   },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     alert("No Record Was Found");
                 }

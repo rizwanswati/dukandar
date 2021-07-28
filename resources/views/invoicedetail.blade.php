@@ -62,7 +62,7 @@
                                     <div class="col-sm-auto">
                                         <div class="input-group">
                                             <div class="input-group-text">From</div>
-                                            <input class="form-control" type="date" value="2019-08-19"
+                                            <input class="form-control" type="date" value="{{date('Y-m-d')}}"
                                                    id="example-date-input" name="fromDate">
                                         </div>
 
@@ -71,7 +71,7 @@
                                     <div class="col-sm-auto">
                                         <div class="input-group">
                                             <div class="input-group-text">To</div>
-                                            <input class="form-control" type="date" value="2019-08-19"
+                                            <input class="form-control" type="date" value="{{date('Y-m-d')}}"
                                                    id="example-date-input" name="toDate">
                                         </div>
                                     </div>
@@ -103,7 +103,7 @@
                                     </div>
 
                                         <div class="col-sm-auto">
-{{--                                            <button id="submit" type="submit" class="btn btn-primary w-md">Submit</button>--}}
+                                        {{-- <button id="submit" type="submit" class="btn btn-primary w-md">Submit</button>--}}
                                             <input type="button" id="submit" class="btn btn-primary w-md" value="Submit" />
                                         </div>
                                 </form>
@@ -153,10 +153,6 @@
 
                 <!-- end Table and class=row -->
 
-
-
-
-
             </div>
             <!-- container-fluid -->
         </div>
@@ -165,6 +161,14 @@
 {{--        Footer--}}
         <x-footer />
 {{--        Footer--}}
+
+
+        <!-- Image loader -->
+        <div id='loader' style='display: none;'>
+            <img src="{{asset('assets/images/loading.gif')}}" width='32px' height='32px'>
+            </div>
+            <!-- Image loader -->
+
 
     </div>
     <!-- end main content-->
@@ -203,7 +207,7 @@
 <script src="{{asset('assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
 
 <!-- Datatable init js -->
-<script src="{{asset('assets/js/pages/datatables.init.js')}}"></script>
+{{-- <script src="{{asset('assets/js/pages/datatables.init.js')}}"></script> --}}
 
 
 

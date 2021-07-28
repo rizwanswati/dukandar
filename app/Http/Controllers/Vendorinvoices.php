@@ -54,8 +54,8 @@ class Vendorinvoices extends Controller
     }
 
     function getVendors($city_id){
-       $vendors =  Admin_user::select('user_id','user_name')
-        ->where(['user_city'=>$city_id])
+       $vendors =  Admin_user::select('user_id','user_name','user_type')
+        ->where(['user_city'=>$city_id,'user_type'=>'Vendor'])
             ->get();
         if (!empty($vendors)) {
             return response($vendors, 200);

@@ -34,6 +34,9 @@ $(document).ready(function()
                 {"data":"full_name"},
                 {"data":"city_name"},
             ],
+            "order": [
+                [ 0, "desc" ]
+            ],
 
             buttons: [
                 "copy","excel","pdf","colvis","print","pageLength"

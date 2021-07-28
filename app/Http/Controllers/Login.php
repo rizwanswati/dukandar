@@ -15,7 +15,7 @@ class Login extends Controller
 
         $data = Admin_user::where(
             [
-                'user_name'     => $username,
+                'username'     => $username,
                 'user_pin_code' => $pin,
                 'user_type'     => typeReturn($type)
             ]
@@ -28,10 +28,10 @@ class Login extends Controller
                 return redirect('dashboard');
 
             }else{
-                return 'User is not Active';
+                return view('420usernotfound');
             }
         }else{
-            return 'User Does Not Exist';
+            return view('420usernotfound');
         }
     }
     function logout(Request $request)

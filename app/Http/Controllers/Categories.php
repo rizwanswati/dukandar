@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Support\Facades\URL;
 
 class Categories extends Controller
 {
@@ -13,7 +14,7 @@ class Categories extends Controller
             $data = Category::getCategory();
             return DataTables($data)
             ->addColumn('image', function ($data) {
-                $url=$data->category_image_url;
+                $url=$url=$this->ImgURL().$data->category_image_url;
                 return '<img src='.$url.' border="0" width="55" height="55" class="img-rounded" align="center" />';
          })->rawColumns(['image'])
          ->make(true);
@@ -25,7 +26,7 @@ class Categories extends Controller
             $data = Category::getSubCategory();
             return DataTables($data)
             ->addColumn('image', function ($data) {
-            $url=$data->subcategory_image_url;
+            $url= $url=$this->ImgURL().$data->subcategory_image_url;
             return '<img src='.$url.' border="0" width="55" height="55" class="img-rounded" align="center" />';
          })->rawColumns(['image'])
          ->make(true);
@@ -86,5 +87,9 @@ class Categories extends Controller
                 }
             }
         }
+    }
+
+    protected function ImgURL(){
+        return URL::to('/')."/assets/images/";
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Extra;
+use Illuminate\Support\Facades\URL;
 use Yajra\DataTables\DataTables;
 
 class Extras extends Controller
@@ -14,7 +15,7 @@ class Extras extends Controller
             $data = Extra::getAddImgs();
             return DataTables($data)
             ->addColumn('image', function ($data) {
-                $url=$data->image_url;
+                $url=$url=$this->ImgURL().$data->image_url;
                 return '<img src='.$url.' border="0" width="55" height="55" class="img-rounded" align="center" />';
          })->rawColumns(['image'])
          ->make(true);
@@ -55,5 +56,9 @@ class Extras extends Controller
                 }
             }
         }
+    }
+
+    protected function ImgURL(){
+        return URL::to('/')."/assets/images/";
     }
 }
